@@ -1,0 +1,162 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.result-container {
+    margin-top: 30px;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.result-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    margin: 0;
+}
+
+.decryption-result {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+}
+
+.result-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #4a6278;
+}
+
+.result-label {
+    font-weight: bold;
+    color: #ecf0f1;
+    display: inline-block;
+    width: 150px;
+}
+
+.result-value {
+    color: #f1c40f;
+    font-family: 'Courier New', monospace;
+}
+
+.vulnerability-result {
+    background-color: #34495e;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.vulnerability-metric {
+    margin-bottom: 10px;
+}
+
+.metric-label {
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+.metric-value {
+    color: #f1c40f;
+}
+
+.recommendation {
+    font-style: italic;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+    color: #ecf0f1;
+}
+
+.security-level {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.not-secure {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.somewhat-secure {
+    background-color: #feca57;
+    color: black;
+}
+
+.secure {
+    background-color: #1dd1a1;
+    color: white;
+}
+
+.very-secure {
+    background-color: #2ecc71;
+    color: white;
+}

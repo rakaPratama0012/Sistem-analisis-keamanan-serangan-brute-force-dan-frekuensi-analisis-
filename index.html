@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Keamanan E-Voting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Analisis Keamanan Sistem E-Voting</h1>
+        <h1>Dari Serangan Brute Force Dan Frekuensi Analysis</h1>
+        <p>Masukkan data terenkripsi untuk menganalisis kerentanan sistem:</p>
+        
+        <div class="form-group">
+            <label for="nim">NIM Terenkripsi (Caesar Cipher mod 10):</label>
+            <input type="text" id="nim" placeholder="Contoh: 123456789012" maxlength="12" pattern="\d{12}" title="Harus 12 digit angka">
+        </div>
+        
+        <div class="form-group">
+            <label for="caesar-key">Kunci Caesar Cipher (0-9):</label>
+            <input type="number" id="caesar-key" min="0" max="9" value="3">
+        </div>
+        
+        <div class="form-group">
+            <label for="nama">Nama Terenkripsi (Polyalphabetic Cipher):</label>
+            <input type="text" id="nama" placeholder="Contoh: XyzAbC">
+        </div>
+        
+        <div class="form-group">
+            <label for="poly-key">Kunci Polyalphabetic:</label>
+            <input type="text" id="poly-key" placeholder="Contoh: kunci">
+        </div>
+        
+        <button onclick="analyzeSecurity()">Analisis Keamanan</button>
+        
+        <div id="result" class="result-container" style="display: none;">
+            <h3 class="result-header">Hasil Analisis Keamanan</h3>
+            
+            <div class="decryption-result">
+                <div class="result-item">
+                    <span class="result-label">NIM Enkripsi:</span>
+                    <span id="encrypted-nim" class="result-value"></span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">NIM Asli:</span>
+                    <span id="decrypted-nim" class="result-value"></span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">Nama Enkripsi:</span>
+                    <span id="encrypted-nama" class="result-value"></span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">Nama Asli:</span>
+                    <span id="decrypted-nama" class="result-value"></span>
+                </div>
+            </div>
+            
+            <div class="vulnerability-result">
+                <div class="vulnerability-metric">
+                    <span class="metric-label">Tingkat Keamanan:</span>
+                    <span id="vulnerability-level" class="metric-value"></span>
+                </div>
+                
+                <div id="security-level-badge" class="security-level"></div>
+                
+                <div class="vulnerability-metric">
+                    <span class="metric-label">Kombinasi Kekuatan Kripto:</span>
+                    <span id="crypto-strength" class="metric-value"></span>
+                </div>
+                
+                <div class="vulnerability-metric">
+                    <span class="metric-label">Perkiraan Waktu Brute Force:</span>
+                    <span id="brute-force-time" class="metric-value"></span>
+                </div>
+                
+                <div class="recommendation" id="security-recommendation"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
